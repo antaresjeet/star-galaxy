@@ -1,5 +1,5 @@
 import Image from "next/image";
-import placeholder from '../../../public/imgs/preview.jpg'
+import placeholder from '../../../public/images/preview.jpg'
 export default function About(): JSX.Element {
   return (
     <section className="container mx-auto">

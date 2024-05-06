@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.star-header-wrap {
+  border-bottom: 1px solid rgba(227.40, 222.91, 255, 0.33);
+
+  a {
+    margin: 0 30px;
+  }
+}
+
 .gallery {
   position: relative;
   width: 250px;
@@ -42,4 +55,8 @@
   100% {
     transform: perspective(1000px) rotateY(360deg)
   }
+}
+
+.character-card{
+  padding: 20px;
 }
