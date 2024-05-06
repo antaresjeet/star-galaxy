@@ -2,11 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "StarJedi";
+  src: local("StarJedi"), url(./fonts/Starjedi.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Orbitron";
+  src: local("StarJedi"), url(./fonts/Orbitron.ttf) format("truetype");
+}
+
 body {
   background-color: #000;
   color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
 }
-
+h1,
+h2,
+h3 {
+   font-family: "StarJedi";
+}
+h4,
+h5,
+h6 {
+   font-family: "Orbitron", sans-serif;
+   font-weight: 700;
+}
 .star-header-wrap {
   border-bottom: 1px solid rgba(227.40, 222.91, 255, 0.33);
 
@@ -20,7 +41,7 @@ body {
   width: 250px;
   height: 200px;
   transform-style: preserve-3d;
-  animation: animate 20s linear infinite
+  animation: animate 25s linear infinite
 }
 
 .gallery span {
@@ -55,8 +76,4 @@ body {
   100% {
     transform: perspective(1000px) rotateY(360deg)
   }
-}
-
-.character-card{
-  padding: 20px;
 }
