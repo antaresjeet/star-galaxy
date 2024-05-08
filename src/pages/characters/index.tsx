@@ -1,6 +1,7 @@
 import Image from "next/image";
-import starWarIntro from '../../../public/images/star-war-intro.png'
+import starWarIntro from '../../../public/imgs/star-war-intro.png'
 import avatar from '../../../public/imgs/avatar.png'
+import Button from "@/components/button";
 export default function Characters(): JSX.Element {
   return (
     <div className="star-characters-container">
@@ -24,93 +25,93 @@ export default function Characters(): JSX.Element {
         </div>
       </section>
       <section className="container mx-auto px-12 py-16">
-        <div className="charcters-list-wrap grid grid-cols-4 gap-10">
-          <div className="bg-zinc-300 character-card p-2">
+        <div className="charcters-list-wrap grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+          <div className="bg-zinc-300 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>
-          <div className="bg-zinc-300 character-card p-2">
+          <div className="bg-zinc-300 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>
-          <div className="bg-zinc-300 character-card p-2">
+          <div className="bg-zinc-300 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>
-          <div className="bg-zinc-300 character-card p-2">
+          <div className="bg-zinc-300 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>
           {/* bg yellow */}
-          <div className="bg-yellow-400 character-card p-2">
+          <div className="bg-yellow-400 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>
-          <div className="bg-yellow-400 character-card p-2">
+          <div className="bg-yellow-400 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>
-          <div className="bg-yellow-400 character-card p-2">
+          <div className="bg-yellow-400 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>
-          <div className="bg-yellow-400 character-card p-2">
+          <div className="bg-yellow-400 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-20px] right-[10px]" src={avatar}></Image>
-              <h3 className="text-xl mb-2 font-semibold">Darth Vader</h3>
+              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
+              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
               <p>Planet: Tatooine</p>
               <p>Birth year: 19BBY</p>
               <div className="text-end mt-3">
-                <button className="p-2 bg-yellow-400 shadow text-black">More Info</button>
+                <Button btnText="More Info"></Button>
               </div>
             </div>
           </div>

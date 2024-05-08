@@ -33,8 +33,8 @@ export default function About(): JSX.Element {
         </div>
       </div>
       <h6 className="text-center">A murky world awaits. Here, we delve into the lives of bounty hunters -
-        the galaxy's independent contractors who track down outlaws for a hefty price. Discover the motivations,
-        codes of honor (or lack thereof), and the deadly tools of this trade. We'll also explore some of the most
+        the galaxy&apos;s independent contractors who track down outlaws for a hefty price. Discover the motivations,
+        codes of honor (or lack thereof), and the deadly tools of this trade. We&apos;ll also explore some of the most
         notorious bounty hunters in Star Wars history.</h6>
     </section>
   );

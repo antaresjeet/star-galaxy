@@ -5,6 +5,7 @@ export default function Header() {
     <header className='star-header-wrap flex justify-center p-3'>
       <Link href="/">Characters</Link>
       <Link href="/about">About</Link>
+      <Link href="/films">Films</Link>
     </header>
   );
 }

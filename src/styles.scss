@@ -32,7 +32,8 @@ h6 {
   border-bottom: 1px solid rgba(227.40, 222.91, 255, 0.33);
 
   a {
-    margin: 0 30px;
+    margin: 0 28px;
+    font-weight: 600;
   }
 }
 
@@ -76,4 +77,13 @@ h6 {
   100% {
     transform: perspective(1000px) rotateY(360deg)
   }
+}
+
+.character-card{
+  padding: 20px 6px 6px 6px;
+}
+
+.movie-filter-head span{
+  margin-right: 25px;
+  cursor: pointer;
 }
