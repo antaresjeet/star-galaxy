@@ -12,7 +12,7 @@ export default function Characters(): JSX.Element {
         <div className="character-search  flex justify-center">
           <div className="relative w-[58vw]">
             <svg className="absolute left-[20px] top-[21px]" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clipRule="evenodd" d="M1 7.58347C0.999526 4.44328 3.21735 1.74005 6.29712 1.127C9.37688 0.513948 12.4608 2.16182 13.6629 5.06282C14.865 7.96382 13.8504 11.31 11.2396 13.0549C8.62884 14.7998 5.14905 14.4575 2.92836 12.2372C1.69381 11.0031 1.00015 9.32908 1 7.58347Z" stroke="white" strokeOpacity="0.8" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M1 7.58347C0.999526 4.44328 3.21735 1.74005 6.29712 1.127C9.37688 0.513948 12.4608 2.16182 13.6629 5.06282C14.865 7.96382 13.8504 11.31 11.2396 13.0549C8.62884 14.7998 5.14905 14.4575 2.92836 12.2372C1.69381 11.0031 1.00015 9.32908 1 7.58347Z" stroke="white" strokeOpacity="0.8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M12.2378 12.2383L15.9992 15.9997" stroke="white" strokeOpacity="0.8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <button className="w-[70px] bg-white absolute right-2 top-2 flex justify-center items-center h-[73%]">
@@ -25,26 +25,34 @@ export default function Characters(): JSX.Element {
         </div>
       </section>
       <section className="container mx-auto px-12 py-16">
-        <div className="charcters-list-wrap grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-          <div className="bg-zinc-300 character-card">
-            <div className="p-4 mt-5 pt-10 bg-black relative">
-              <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
-              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
-              <p>Planet: Tatooine</p>
-              <p>Birth year: 19BBY</p>
-              <div className="text-end mt-3">
-                <Button btnText="More Info"></Button>
+        <div className="characters-list-wrap grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+          <div className="card-wrap">
+            <div className="bg-zinc-300 character-card">
+              <div className="p-4 mt-5 pt-10 bg-black relative">
+                <Image alt='' className="absolute avatar-img top-[-30px] right-[10px]" src={avatar}></Image>
+                <div className="card-body">
+                  <h4 className="text-lg mb-2 font-semibold character-name">Darth Vader</h4>
+                  <div className="character-info">
+                    <p>Planet: Tatooine</p>
+                    <p>Birth year: 19BBY</p>
+                  </div>
+                  <div className="text-end action-btn mt-3">
+                    <Button btnText="More Info"></Button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className="bg-zinc-300 character-card">
             <div className="p-4 mt-5 pt-10 bg-black relative">
               <Image alt='' className="absolute top-[-30px] right-[10px]" src={avatar}></Image>
-              <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
-              <p>Planet: Tatooine</p>
-              <p>Birth year: 19BBY</p>
-              <div className="text-end mt-3">
-                <Button btnText="More Info"></Button>
+              <div className="card-body">
+                <h4 className="text-lg mb-2 font-semibold">Darth Vader</h4>
+                <p>Planet: Tatooine</p>
+                <p>Birth year: 19BBY</p>
+                <div className="text-end mt-3">
+                  <Button btnText="More Info"></Button>
+                </div>
               </div>
             </div>
           </div>
