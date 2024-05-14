@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 export interface ButtonComponentProps {
-  btnText: string;
+  text: string;
 }
 
 export interface CharacterComponentProps {

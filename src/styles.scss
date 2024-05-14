@@ -4,11 +4,12 @@
 
 @font-face {
   font-family: "StarJedi";
-  src: local("StarJedi"), url(./fonts/Starjedi.ttf) format("truetype");
+  src: local("StarJedi"), url(./assets/fonts/Starjedi.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "Orbitron";
-  src: local("StarJedi"), url(./fonts/Orbitron.ttf) format("truetype");
+  src: local("StarJedi"), url(./assets/fonts/Orbitron.ttf) format("truetype");
 }
 
 body {
@@ -17,17 +18,20 @@ body {
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
 }
+
 h1,
 h2,
 h3 {
-   font-family: "StarJedi";
+  font-family: "StarJedi";
 }
+
 h4,
 h5,
 h6 {
-   font-family: "Orbitron", sans-serif;
-   font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
 }
+
 .star-header-wrap {
   border-bottom: 1px solid rgba(227.40, 222.91, 255, 0.33);
 
@@ -55,7 +59,7 @@ h6 {
 }
 
 @for $i from 1 through 8 {
-  .gallery span:nth-child(#{$i}){
+  .gallery span:nth-child(#{$i}) {
     transform: rotateY(calc(#{$i} * 45deg)) translateZ(400px)
   }
 }
@@ -79,18 +83,19 @@ h6 {
   }
 }
 
-.movie-filter-head span{
+.movie-filter-head span {
   margin-right: 25px;
   cursor: pointer;
 }
 
-.card-wrap{
+.card-wrap {
   perspective: 1000px;
 }
 
-.action-btn{
+.action-btn {
   transition: all 0.5s ease-in-out;
   transform: translate3d(0px, 0px, 20px);
+
   &:hover {
     transform: translate3d(0px, 0px, 60px);
   }
@@ -100,8 +105,8 @@ h6 {
   padding-top: 50px;
   border: 3px solid rgb(255, 255, 255);
   transform-style: preserve-3d;
-  background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
-      repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#ffffff 0 18.75%);
+  background: linear-gradient(135deg, #0000 18.75%, #f3f3f3 0 31.25%, #0000 0),
+    repeating-linear-gradient(45deg, #f3f3f3 -6.25% 6.25%, #ffffff 0 18.75%);
   background-size: 60px 60px;
   background-position: 0 0, 0 0;
   background-color: #f0f0f0;
@@ -163,5 +168,3 @@ h6 {
   transform: translate3d(0px, 0px, 80px);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
 }
-
- 

@@ -13,7 +13,7 @@ export default function CharacterCard({ name, img, planet, birth }: CharacterCom
             <p>Birth year: {birth}</p>
           </div>
           <div className="see-more text-end">
-            <Button btnText="More Info"></Button>
+            <Button text="More Info"></Button>
           </div>
         </div>
         <div className="avatar-container h-[70px] w-[70px]">

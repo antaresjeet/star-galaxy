@@ -2,7 +2,7 @@ import Image from "next/image";
 import starWarIntro from '../../../public/imgs/star-war-intro.png'
 import avatar from '../../../public/imgs/avatar.png'
 import Button from "@/components/button";
-import CharacterCard from "@/components/characterCard";
+import CharacterCard from "@/components/character-card";
 
 export default function Characters(): JSX.Element {
   return (

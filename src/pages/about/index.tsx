@@ -38,7 +38,7 @@ export default function About(): JSX.Element {
         codes of honor (or lack thereof), and the deadly tools of this trade. We&apos;ll also explore some of the most
         notorious bounty hunters in Star Wars history.</h6>
       <div className="text-center mt-6">
-        <Button btnText="Official Website"></Button>
+        <Button text="Official Website"></Button>
       </div>
     </section>
   );

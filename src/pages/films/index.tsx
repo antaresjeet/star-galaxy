@@ -23,7 +23,7 @@ export default function Films(): JSX.Element {
               <p>Star Wars: A New Hope (Episode IV) (1977)</p>
               <small>Release year:  1977</small>
               <div className="movie-action mt-2">
-                <Button btnText="View Details"></Button>
+                <Button text="View Details"></Button>
               </div>
             </div>
           </div>
