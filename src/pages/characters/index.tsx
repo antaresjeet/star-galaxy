@@ -1,7 +1,6 @@
 import Image from "next/image";
 import starWarIntro from '../../../public/imgs/star-war-intro.png'
 import avatar from '../../../public/imgs/avatar.png'
-import Button from "@/components/button";
 import CharacterCard from "@/components/characterCard";
 
 export default function Characters(): JSX.Element {
