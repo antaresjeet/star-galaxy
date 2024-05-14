@@ -6,7 +6,7 @@ export default function Footer() {
       <p className="text-center">
         © {new Date().getFullYear()}{" "}
         <Link
-          href={'javascript:void(0)'}
+          href={'https://github.com/antaresjeet'} target="_blank"
         >
           antaresjeet
         </Link>
