@@ -1,5 +1,6 @@
 import Image from "next/image";
 import placeholder from '../../../public/imgs/preview.jpg'
+import Button from "@/components/button";
 export default function About(): JSX.Element {
   return (
     <section className="container mx-auto py-8 px-12">
@@ -36,6 +37,9 @@ export default function About(): JSX.Element {
         the galaxy&apos;s independent contractors who track down outlaws for a hefty price. Discover the motivations,
         codes of honor (or lack thereof), and the deadly tools of this trade. We&apos;ll also explore some of the most
         notorious bounty hunters in Star Wars history.</h6>
+      <div className="text-center mt-6">
+        <Button btnText="Official Website"></Button>
+      </div>
     </section>
   );
 }
