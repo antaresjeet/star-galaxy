@@ -1,7 +1,6 @@
 import Image from "next/image";
 import placeholder from '../../../public/imgs/movie-preview.png'
 import Button from "@/components/button";
-import './index.scss'
 export default function Films(): JSX.Element {
   return (
     <div className="movies-star-war">

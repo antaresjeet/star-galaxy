@@ -1,10 +1,10 @@
 import Button from "@/components/button";
 import Image from "next/image";
 import { CharacterComponentProps } from "@/declarations";
-import './index.scss'
+
 export default function CharacterCard({ name, img, planet, birth }: CharacterComponentProps): JSX.Element {
   return (
-    <div className="card-wrap ">
+    <div className="card-wrap">
       <div className="character-card">
         <div className="content-box">
           <h4 className="text-lg mb-2 font-semibold character-name">{name}</h4>

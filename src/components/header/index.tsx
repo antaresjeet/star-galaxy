@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import './index.scss'
+
 export default function Header() {
   return (
     <header className='star-header-wrap flex justify-center p-3'>
