@@ -7,10 +7,12 @@ export default function MyStarWarsApp({
   pageProps
 }: AppProps) {
   return (
-    <>
+    <div className='flex flex-col min-h-screen'>
       <Header />
-      <Component {...pageProps} />
+      <div className='flex-1'>
+        <Component {...pageProps} />
+      </div>
       <Footer />
-    </>
+    </div>
   )
 }

@@ -191,6 +191,19 @@ input:focus {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
 }
 
+.darth-vader {
+  stroke-dasharray: 250px;
+}
+
+@keyframes darth-vader-loader {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+
+  100% {
+    stroke-dashoffset: 2500px;
+  }
+}
 
 @media all and (max-width: 575.98px) {
   body {

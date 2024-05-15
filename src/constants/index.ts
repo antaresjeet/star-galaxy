@@ -1,4 +1,4 @@
-import { CharacterImage } from '@/declarations';
+import { CharacterImage, SWTextContent } from '@/declarations';
 import { StaticImageData } from 'next/image';
 
 // * characters
@@ -24,7 +24,7 @@ import about7 from '../../public/about/about-7.webp';
 import about8 from '../../public/about/about-8.webp';
 
 
-export const characterImages: CharacterImage[] = [
+const characterImages: CharacterImage[] = [
   {
     url: 'https://swapi.dev/api/people/1/',
     image: lukeSkyWalker
@@ -67,7 +67,7 @@ export const characterImages: CharacterImage[] = [
   },
 ]
 
-export const aboutImages: StaticImageData[] = [
+const aboutImages: StaticImageData[] = [
   about1,
   about2,
   about3,
@@ -77,3 +77,13 @@ export const aboutImages: StaticImageData[] = [
   about7,
   about8
 ]
+
+const swTextContent: SWTextContent = {
+  characterNotFound: `Amidst the cosmos, a missing link there be. Like a star's light fading into infinity.`
+}
+
+export {
+  characterImages,
+  aboutImages,
+  swTextContent
+}
