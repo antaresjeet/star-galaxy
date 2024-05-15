@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: "StarJedi";
   src: local("StarJedi"), url(./assets/fonts/Starjedi.ttf) format("truetype");
@@ -12,9 +13,19 @@
   src: local("StarJedi"), url(./assets/fonts/Orbitron.ttf) format("truetype");
 }
 
+$background-color: #000;
+$color: #fff;
+
+:root {
+  --background-color: #000;
+  --color: #fff;
+  --theme-yellow-color: #ffe81f;
+}
+
+
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--color);
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
 }
@@ -32,12 +43,23 @@ h6 {
   font-weight: 700;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid var(--theme-yellow-color);
+}
+
 .star-header-wrap {
   border-bottom: 1px solid rgba(227.40, 222.91, 255, 0.33);
 
   a {
     margin: 0 28px;
     font-weight: 600;
+  }
+}
+
+.star-intro {
+  h1 {
+    text-shadow: 10px 10px 0 var(--background-color), 12px 12px 0 var(--theme-yellow-color);
   }
 }
 
@@ -164,7 +186,20 @@ h6 {
   top: 24px;
   right: 24px;
   background: white;
-  border: 1px solid rgb(250 204 21);
+  border: 1px solid var(--theme-yellow-color);
   transform: translate3d(0px, 0px, 80px);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+}
+
+
+@media all and (max-width: 575.98px) {
+  body {
+    line-height: 2;
+  }
+
+  .star-intro {
+    h1 {
+      text-shadow: 7px 7px 0 #000, 9px 9px 0 #ffe81f;
+    }
+  }
 }
