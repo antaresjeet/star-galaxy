@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-export interface SWTextContent {
-  [index: string]: string;
+export interface GenericObject {
+  [index: string]: any;
 }
 export interface ButtonComponentProps {
   text: string;

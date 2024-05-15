@@ -1,4 +1,4 @@
-import { CharacterImage, SWTextContent } from '@/declarations';
+import { CharacterImage, GenericObject } from '@/declarations';
 import { StaticImageData } from 'next/image';
 
 // * characters
@@ -78,8 +78,14 @@ const aboutImages: StaticImageData[] = [
   about8
 ]
 
-const swTextContent: SWTextContent = {
-  characterNotFound: `Amidst the cosmos, a missing link there be. Like a star's light fading into infinity.`
+const swTextContent: GenericObject = {
+  characterNotFound: `Amidst the cosmos, a missing link there be. Like a star's light fading into infinity.`,
+  about: [
+    `In the vast expanse of the galaxy, where starships soar through the cosmos and planets teem with life, the echoes of ancient conflicts reverberate across the stars. From the desolate sands of Tatooine to the bustling cityscape of Coruscant, every corner of the galaxy holds secrets waiting to be unearthed.`,
+    `Amidst the backdrop of interstellar warfare and political intrigue, heroes rise to challenge the darkness that threatens to engulf the galaxy. From the noble Jedi Knights wielding the power of the Force to the daring smugglers and rebels fighting for freedom, their destinies are intertwined in a timeless struggle between light and darkness.`,
+    `But amidst the chaos and turmoil, there is also hope. For in the heart of every being lies the potential for greatness, and in the darkest of times, even the smallest act of courage can ignite the flames of rebellion. As the galaxy hangs in the balance, new heroes emerge to shape the fate of worlds and forge their own destinies among the stars.`,
+    `So, as you embark on your journey through the Star Wars saga, remember that the Force is with you, guiding your path and illuminating the way forward. For in this galaxy far, far away, adventure awaits at every turn, and the greatest stories are yet to be told.`,
+  ]
 }
 
 export {
