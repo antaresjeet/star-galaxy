@@ -5,6 +5,8 @@ import { charactersAtom, homeWorldsAtom, loadingAtom } from "@/jotai";
 import { Character } from "@/declarations";
 import { characterImages, swTextContent } from "@/constants";
 import DarthVaderLoader from "@/components/darth-vader-loader";
+import placeholder from '../../../public/imgs/movie-preview.png'
+import Image from "next/image";
 
 export default function Characters(): JSX.Element {
   const [characters, setCharacters] = useAtom(charactersAtom);
@@ -87,6 +89,30 @@ export default function Characters(): JSX.Element {
                   />
                 </div>
               ))}
+              <div className="charcter-detailed-view bg-white rounded-lg p-4 text-center text-black relative">
+                <Image alt='' className="h-[270px] w-full rounded-lg shadow" src={placeholder}></Image>
+                <span className="close-detailed-view absolute right-[-15px] top-[-15px] w-9 h-9 bg-white rounded-full border-4 border-black
+                  flex justify-center items-center cursor-pointer">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </span>
+                <div className="character-bio mt-3">
+                  <h4 className="text-base">Luke Skywalker The Jedi</h4>
+                  <div className="character-features mt-3">
+                    <p>Birth year: 19BBY</p>
+                    <p>Gender: male</p>
+                    <p>Height: 172</p>
+                    <p>Weight: 77</p>
+                    <p>Hair color: blond</p>
+                    <p>Skin color: fair</p>
+                    <p>Eye color: blue</p>
+                    <p className="mt-3 character-feature">A farm boy from Tatooine, Luke Skywalker becomes a hero when he trains
+                      as a Jedi and uses the Force to help save the galaxy.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           ) : (
             <div className="flex justify-center p-28">
