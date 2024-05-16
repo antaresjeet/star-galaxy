@@ -49,8 +49,6 @@ input:focus {
 }
 
 .star-header-wrap {
-  border-bottom: 1px solid rgba(227.40, 222.91, 255, 0.33);
-
   a {
     margin: 0 28px;
     font-weight: 600;
@@ -84,15 +82,6 @@ input:focus {
   .gallery span:nth-child(#{$i}) {
     transform: rotateY(calc(#{$i} * 45deg)) translateZ(400px)
   }
-}
-
-.gallery span img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover
 }
 
 @keyframes animate {

@@ -10,7 +10,8 @@ export default function About(): JSX.Element {
         <div className="gallery mt-4">
           {aboutImages.map((aboutImage, index) => (
             <span key={index}>
-              <Image width={550} height={400} alt={`About - ${index}`} src={aboutImage}></Image>
+              <Image className="absolute top-0 left-0 w-full h-full object-cover"
+                width={550} height={400} alt={`About - ${index}`} src={aboutImage}></Image>
             </span>
           ))}
         </div>
