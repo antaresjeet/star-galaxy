@@ -44,3 +44,14 @@ export interface HomeWorld {
   terrain: string;
   url: string;
 }
+
+export interface Movie {
+  title:string,
+  release_year:string
+}
+
+export interface ShopItem {
+  title:string,
+  price:number,
+  in_cart:boolean
+}

@@ -1,20 +1,15 @@
-import Image from "next/image";
-import placeholder from '../../../public/imgs/movie-preview.png'
-import Button from "@/components/button";
+import ShopCard from "@/components/shop-card";
+
 export default function Shop(): JSX.Element {
   return (
-    <section className="shop-star-container container px-12 py-8">
-      <div className="shop-star-war mt-6 grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-        <div className="shop-card">
-          <Image alt='' src={placeholder}></Image>
-          <div className="shop-item-info bg-[#333333] p-2 z-[2] w-[90%] left-[11px] top-[-20px] right-[14px] relative text-center">
-            <h4>Star Wars Art</h4>
-            <span>$45</span>
-            <div className="text-ecenter mt-2 mb-2">
-              <Button text="Add to cart"></Button>
-            </div>
-          </div>
-        </div>
+    <section className="shop-star-container container mx-auto px-16 py-8">
+      <div className="text-center">
+        <h2 className="text-4xl mb-4">Navigate the Cosmos</h2>
+        <p className="text-base">Unearth Rare Finds and Galactic Wonders Alike</p>
+      </div>
+      <div className="shop-star-war mt-12 grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+        <ShopCard title="Star Wars Art" price={45} in_cart={false}></ShopCard>
+        <ShopCard title="Star Wars Art" price={45} in_cart={true}></ShopCard>
       </div>
     </section>
   );

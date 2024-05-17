@@ -61,7 +61,7 @@ export default function Characters(): JSX.Element {
 
   return (
     <div className="star-characters-container">
-      <section className="container mx-auto px-10">
+      <section className="container mx-auto px-16">
         <div className="star-intro flex justify-between flex-col items-center text-center mx-0 my-[100px] select-none">
           <h1 className="text-[92px] md:text-[90px] lg:text-[110px] xl:text-[120px] text-[#ffe81f] leading-none mb-10">Star wars</h1>
           <h2 className="text-[42px] md:text-[54px] lg:text-[62px] xl:text-[72px] tracking-[3px] leading-none">characters</h2>
@@ -79,7 +79,7 @@ export default function Characters(): JSX.Element {
         )}
       </section>
       {!loading && (
-        <section className="container mx-auto px-12 py-16">
+        <section className="container mx-auto px-16 py-16">
           {filteredCharacters.length ? (
             <div className="characters-list-wrap grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
               {filteredCharacters.map((character: Character, index: number) => (
