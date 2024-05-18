@@ -85,6 +85,28 @@ const swTextContent: GenericObject = {
     `Amidst the backdrop of interstellar warfare and political intrigue, heroes rise to challenge the darkness that threatens to engulf the galaxy. From the noble Jedi Knights wielding the power of the Force to the daring smugglers and rebels fighting for freedom, their destinies are intertwined in a timeless struggle between light and darkness.`,
     `But amidst the chaos and turmoil, there is also hope. For in the heart of every being lies the potential for greatness, and in the darkest of times, even the smallest act of courage can ignite the flames of rebellion. As the galaxy hangs in the balance, new heroes emerge to shape the fate of worlds and forge their own destinies among the stars.`,
     `So, as you embark on your journey through the Star Wars saga, remember that the Force is with you, guiding your path and illuminating the way forward. For in this galaxy far, far away, adventure awaits at every turn, and the greatest stories are yet to be told.`,
+  ],
+  quotes: [
+    "May the Force be with you. 🌟",
+    "The Force will be with you, always. 💫",
+    "There is good in him. I've felt it. ❤️",
+    "Size matters not. Look at me. Judge me by my size, do you? 👀",
+    "This is a new day, a new beginning. 🌅",
+    "Stay on target. 🎯",
+    "I have a good feeling about this. 😊",
+    "The Force is strong with this one. 💪",
+    "The ability to speak does not make you intelligent. 🗣️",
+    "Breathe. Just breathe. Now reach out. What do you see? 🌌",
+    "In my experience, there is no such thing as luck. 🍀",
+    "You were the chosen one! 🌟",
+    "There's always a bigger fish. 🐟",
+    "This party's over. 🎉",
+    "I love you. - I know. 💘",
+    "There's more to life than who you're related to. 💭",
+    "Hope is like the sun. If you only believe in it when you can see it, you'll never make it through the night. ☀️",
+    "I'm just a simple man trying to make my way in the universe. 🚀",
+    "We are what they grow beyond. That is the true burden of all masters. 🌱",
+    "We are the spark, that will light the fire that'll burn the First Order down. 🔥"
   ]
 }
 
