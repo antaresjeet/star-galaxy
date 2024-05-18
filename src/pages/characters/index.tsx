@@ -2,17 +2,19 @@ import CharacterCard from "@/components/character-card";
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { charactersAtom, homeWorldsAtom, loadingAtom } from "@/jotai";
-import { Character } from "@/declarations";
-import { characterImages, swTextContent } from "@/constants";
+import { Character, ModalAnimation } from "@/declarations";
+import { characterExtras, swTextContent } from "@/constants";
 import DarthVaderLoader from "@/components/darth-vader-loader";
-import placeholder from '../../../public/imgs/movie-preview.png'
-import Image from "next/image";
+import CharacterDetail from "@/components/character-detail";
+import Modal from "@/components/modal";
 
 export default function Characters(): JSX.Element {
   const [characters, setCharacters] = useAtom(charactersAtom);
   const [homeWorlds, setHomeWorlds] = useAtom(homeWorldsAtom);
   const [loading, setLoading] = useAtom(loadingAtom);
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedCharacter, setSelectedCharacter] = useState<Character>();
+  const [modalAnimation, setModalAnimation] = useState<ModalAnimation>(ModalAnimation.OPEN);
 
   useEffect(() => {
     const getData = async () => {
@@ -20,7 +22,7 @@ export default function Characters(): JSX.Element {
 
       // * fetch characters
       const getCharacters = async () => {
-        const response = await fetch(`https://swapi.dev/api/people/`);
+        const response = await fetch(`${process.env.swapiEndPoint}people/`);
         const data = await response.json();
         charactersData = data.results;
       };
@@ -29,7 +31,7 @@ export default function Characters(): JSX.Element {
       // * fetch homeworlds
 
       const getHomeWorlds = async () => {
-        const response = await fetch(`https://swapi.dev/api/planets/`);
+        const response = await fetch(`${process.env.swapiEndPoint}planets/`);
         const data = await response.json();
         setHomeWorlds(data.results);
       };
@@ -46,7 +48,8 @@ export default function Characters(): JSX.Element {
         }
         for (let i = 0; i < charactersData.length; i++) {
           charactersData[i].homeworld_name = homeWorlds.find((planet) => planet.url === charactersData[i].homeworld)?.name ?? await getHomeWorld(charactersData[i].homeworld)
-          charactersData[i].image = characterImages.find((characterImage) => characterImage.url === charactersData[i].url)!.image
+          const extras = characterExtras.find((characterExtra) => characterExtra.url === charactersData[i].url)
+          Object.assign(charactersData[i], extras)
         }
       }
 
@@ -58,6 +61,15 @@ export default function Characters(): JSX.Element {
   }, []);
 
   const filteredCharacters = characters.filter((character) => character.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  console.log('filteredCharacters: ', filteredCharacters)
+
+  const onModalClose = () => {
+    setModalAnimation(ModalAnimation.CLOSE)
+
+    setTimeout(() => {
+      setSelectedCharacter(undefined)
+    }, 500);
+  }
 
   return (
     <div className="star-characters-container">
@@ -79,47 +91,34 @@ export default function Characters(): JSX.Element {
         )}
       </section>
       {!loading && (
-        <section className="container mx-auto px-16 py-16">
-          {filteredCharacters.length ? (
-            <div className="characters-list-wrap grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-              {filteredCharacters.map((character: Character, index: number) => (
-                <div key={index}>
-                  <CharacterCard
-                    {...character}
-                  />
-                </div>
-              ))}
-              <div className="charcter-detailed-view bg-white rounded-lg p-4 text-center text-black relative">
-                <Image alt='' className="h-[270px] w-full rounded-lg shadow" src={placeholder}></Image>
-                <span className="close-detailed-view absolute right-[-15px] top-[-15px] w-9 h-9 bg-white rounded-full border-4 border-black
-                  flex justify-center items-center cursor-pointer">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x">
-                    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-                <div className="character-bio mt-3">
-                  <h4 className="text-base">Luke Skywalker The Jedi</h4>
-                  <div className="character-features mt-3">
-                    <p>Birth year: 19BBY</p>
-                    <p>Gender: male</p>
-                    <p>Height: 172</p>
-                    <p>Weight: 77</p>
-                    <p>Hair color: blond</p>
-                    <p>Skin color: fair</p>
-                    <p>Eye color: blue</p>
-                    <p className="mt-3 character-feature">A farm boy from Tatooine, Luke Skywalker becomes a hero when he trains
-                      as a Jedi and uses the Force to help save the galaxy.</p>
+        <>
+          <section className={`container mx-auto px-12 py-16`}>
+            {filteredCharacters.length ? (
+              <div className={`characters-list-wrap grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 w-full`}>
+                {filteredCharacters.map((character: Character, index: number) => (
+                  <div key={index}>
+                    <CharacterCard
+                      character={character}
+                      onCharacterSelect={() => {
+                        setSelectedCharacter(character);
+                        setModalAnimation(ModalAnimation.OPEN)
+                      }}
+                    />
                   </div>
-                </div>
+                ))}
               </div>
-            </div>
-          ) : (
-            <div className="flex justify-center p-28">
-              <p className="text-xl">{swTextContent.characterNotFound}</p>
-            </div>
-          )}
-        </section>
+            ) : (
+              <div className="flex justify-center p-28">
+                <p className="text-xl">{swTextContent.characterNotFound}</p>
+              </div>
+            )}
+          </section>
+        </>
+      )}
+      {selectedCharacter && (
+        <Modal animation={modalAnimation}>
+          <CharacterDetail character={selectedCharacter} onClose={() => onModalClose()} />
+        </Modal>
       )}
       {loading && (
         <div className="flex justify-center">

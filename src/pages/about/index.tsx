@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "@/components/button";
 import { aboutImages, swTextContent } from "@/constants";
+import { openNewWindow } from "@/helpers";
 
 export default function About(): JSX.Element {
   return (
@@ -22,7 +23,7 @@ export default function About(): JSX.Element {
         ))}
       </div>
       <div className="text-center mt-6">
-        <Button text="Official Website"></Button>
+        <Button text="Official Website" clickHandler={() => openNewWindow(process.env.starWarsOfficalWebsite)}></Button>
       </div>
     </section>
   );

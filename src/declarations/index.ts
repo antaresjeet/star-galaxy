@@ -1,15 +1,19 @@
 import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
 export interface GenericObject {
   [index: string]: any;
 }
 export interface ButtonComponentProps {
   text: string;
+  clickHandler?: () => void;
 }
-export interface CharacterImage {
+export interface CharacterExtras {
   url: string;
   image: StaticImageData;
+  tagline: string;
+  title: string;
 }
-export interface Character extends CharacterImage {
+export interface Character extends CharacterExtras {
   name: string;
   height: string;
   mass: string;
@@ -46,12 +50,21 @@ export interface HomeWorld {
 }
 
 export interface Movie {
-  title:string,
-  release_year:string
+  title: string,
+  release_year: string
 }
 
 export interface ShopItem {
-  title:string,
-  price:number,
-  in_cart:boolean
+  title: string,
+  price: number,
+  in_cart: boolean
+}
+
+export enum ModalAnimation {
+  OPEN = 'open',
+  CLOSE = 'close'
+}
+export interface ModalProps {
+  children: ReactNode,
+  animation: ModalAnimation
 }
