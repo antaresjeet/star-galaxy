@@ -2,9 +2,14 @@ import Image from "next/image";
 import placeholder from '../../../public/imgs/movie-preview.png'
 import Button from "@/components/button";
 import FilmCard from "@/components/film-card";
-import { films } from "@/constants";
+import { films, filmsSorting } from "@/constants";
+import { useState } from "react";
+import { Film, SortByFilm } from "@/declarations";
 
 export default function Films(): JSX.Element {
+  const [sortBy, setSortBy] = useState<SortByFilm>(SortByFilm.RELEASE_DATE);
+
+  const sortedFilms = [...films].sort((film1: Film, film2: Film) => film1[sortBy] - film2[sortBy]);
   return (
     <div className="movies-star-war">
       <section className="container relative mx-auto py-8 px-12">
@@ -41,13 +46,12 @@ export default function Films(): JSX.Element {
       </section>
       <section className="filter-movies-list container mx-auto px-12 py-8">
         <div className="movie-filter-head pb-2 border-b-[0.5px] border-neutral-500">
-          <span>All Movies</span>
-          <span>by Date</span>
-          <span>by Category</span>
-          <span>Coming soon</span>
+          {filmsSorting.map((filmSorting) => (
+            <span key={filmSorting.value} className={sortBy === filmSorting.value ? 'text-base' : ''} onClick={() => setSortBy(filmSorting.value)}>{filmSorting.name}</span>
+          ))}
         </div>
         <div className="movies-container mt-6 grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-          {films.map((film, index) => (
+          {sortedFilms.map((film, index) => (
             <FilmCard {...film} key={index}></FilmCard>
           ))}
         </div>

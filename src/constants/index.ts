@@ -1,4 +1,4 @@
-import { CharacterExtras, Film, GenericObject } from '@/declarations';
+import { CharacterExtras, Film, FilmSorting, GenericObject, SortByFilm } from '@/declarations';
 import { StaticImageData } from 'next/image';
 
 // * characters
@@ -235,9 +235,21 @@ const films: Film[] = [
   }
 ];
 
+const filmsSorting: FilmSorting[] = [
+  {
+    name: 'By Release Date',
+    value: SortByFilm.RELEASE_DATE
+  },
+  {
+    name: 'By Episode',
+    value: SortByFilm.EPISODE
+  },
+]
+
 export {
   characterExtras,
   aboutImages,
   swTextContent,
-  films
+  films,
+  filmsSorting
 }

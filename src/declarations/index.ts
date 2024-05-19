@@ -68,7 +68,6 @@ export interface ModalProps {
   children: ReactNode,
   animation: ModalAnimation
 }
-
 export interface Film {
   title: string,
   episode: number,
@@ -78,4 +77,14 @@ export interface Film {
   boxOffice: number,
   image: StaticImageData;
   url: string;
+}
+
+export enum SortByFilm {
+  EPISODE = 'episode',
+  RELEASE_DATE = 'releaseYear'
+}
+
+export interface FilmSorting {
+  name: string,
+  value: SortByFilm
 }
