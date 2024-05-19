@@ -1,7 +1,8 @@
 import Image from "next/image";
 import placeholder from '../../../public/imgs/movie-preview.png'
 import Button from "@/components/button";
-import MovieCard from "@/components/movie-card";
+import FilmCard from "@/components/film-card";
+import { films } from "@/constants";
 
 export default function Films(): JSX.Element {
   return (
@@ -46,10 +47,9 @@ export default function Films(): JSX.Element {
           <span>Coming soon</span>
         </div>
         <div className="movies-container mt-6 grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-          <MovieCard title="Star Wars: A New Hope (Episode IV) (1977)"
-            release_year="1977"></MovieCard>
-          <MovieCard title="Star Wars: A New Hope (Episode IV) (1977)"
-            release_year="1977"></MovieCard>
+          {films.map((film, index) => (
+            <FilmCard {...film} key={index}></FilmCard>
+          ))}
         </div>
       </section>
     </div>

@@ -23,7 +23,7 @@ export default function About(): JSX.Element {
         ))}
       </div>
       <div className="text-center mt-6">
-        <Button text="Official Website" clickHandler={() => openNewWindow(process.env.starWarsOfficalWebsite)}></Button>
+        <Button text="Official Website" clickHandler={() => openNewWindow(process.env.starWarsOfficialWebsite)}></Button>
       </div>
     </section>
   );

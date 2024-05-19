@@ -2,7 +2,7 @@
 const nextConfig = {
   env: {
     swapiEndPoint: 'https://swapi.dev/api/',
-    starWarsOfficalWebsite: 'https://www.starwars.com/'
+    starWarsOfficialWebsite: 'https://www.starwars.com/'
   }
 };
 

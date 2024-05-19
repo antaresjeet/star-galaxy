@@ -68,3 +68,14 @@ export interface ModalProps {
   children: ReactNode,
   animation: ModalAnimation
 }
+
+export interface Film {
+  title: string,
+  episode: number,
+  tagline: string,
+  releaseYear: number,
+  director: string,
+  boxOffice: number,
+  image: StaticImageData;
+  url: string;
+}
