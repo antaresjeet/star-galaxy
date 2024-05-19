@@ -21,7 +21,7 @@ export default function CharacterCard({ character, onCharacterSelect }: Characte
           </div>
         </div>
         <div className="avatar-container h-[87px] w-[87px]">
-          <Image alt='Avatar' className="avatar-img h-full w-full" src={character.image} height={50} width={50} draggable="false"></Image>
+          <Image alt='Avatar' className="avatar-img h-full w-full" src={character.image} height={50} width={50} draggable="false" placeholder="blur"></Image>
         </div>
       </div>
     </div>

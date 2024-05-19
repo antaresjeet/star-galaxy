@@ -10,7 +10,7 @@ export default function CharacterDetail({ character, onClose }: CharacterDetails
   return (
     <div className="relative rounded-lg shadow">
       <div className="flex overflow-y-auto overflow-x-hidden charcter-detailed-view bg-white rounded-lg p-4 text-center text-black max-w-[300px] h-fit flex-col">
-        <Image alt='' className="h-[270px] w-full rounded-lg shadow" src={character.image} draggable="false"></Image>
+        <Image alt='' className="h-[270px] w-full rounded-lg shadow" src={character.image} draggable="false" placeholder="blur"></Image>
         <span className="close-detailed-view absolute right-[-15px] top-[-15px] w-9 h-9 bg-white rounded-full border-4 border-black
                    flex justify-center items-center cursor-pointer" onClick={onClose}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"

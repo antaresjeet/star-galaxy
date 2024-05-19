@@ -6,7 +6,7 @@ import { openNewWindow } from "@/helpers";
 export default function FilmCard(film: Film): JSX.Element {
   return (
     <div className="movie-card flex flex-col justify-between h-full">
-      <Image className="w-full h-auto" alt={film.title} src={film.image} placeholder="blur" />
+      <Image className="w-full h-auto" alt={film.title} src={film.image} placeholder="blur" draggable="false" />
       <div className="movie-info flex flex-col justify-end text-center px-2 pt-2">
         <p>{film.title}</p>
         <small>Release year: {film.releaseYear} </small>

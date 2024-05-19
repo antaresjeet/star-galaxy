@@ -39,7 +39,7 @@ export default function ObiWan() {
     <motion.div className="fixed -translate-y-2/4 h-auto z-[10] cursor-pointer left-[45px] top-[220px]" ref={scope} initial={{ y: -400, opacity: 0 }}>
       <div className="flex flex-col items-center gap-2">
         <motion.div className="group relative" whileTap={{ skewY: 2 }}>
-          <Image alt='Obi Wan' className="w-[80px] select-none" src={KidObiWanAnimated} height={100} width={100} onMouseEnter={changeQuote} draggable="false"></Image>
+          <Image alt='Obi Wan' className="w-[80px] select-none" src={KidObiWanAnimated} height={100} width={100} onMouseEnter={changeQuote} draggable="false" placeholder="blur"></Image>
           <div
             className="bg-zinc-800 p-2 rounded-full group-hover:flex hidden absolute top-1/2 -translate-y-1/2 -right-2 translate-x-full"
           >
