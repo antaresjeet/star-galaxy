@@ -70,7 +70,7 @@ export default function Carousel({ carouselItems }: CarouselProps) {
               />
               <div className="films-banner-content w-2/3 relative z-2">
                 <h3 className="text-3xl mb-4">{carouselItems[currentSlide].title}</h3>
-                <p>{carouselItems[currentSlide].tagline}</p>
+                <p className="hidden md:block">{carouselItems[currentSlide].tagline}</p>
                 <div className="watch-btn mt-10">
                   <Button text="Watch Now" clickHandler={() => openNewWindow(`${process.env.starWarsOfficialWebsite}${carouselItems[currentSlide].url}`)} />
                 </div>
