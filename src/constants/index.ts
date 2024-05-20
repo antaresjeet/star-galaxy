@@ -35,6 +35,16 @@ import theForceAwakens from '../../public/films/star-wars-the-force-awakens.webp
 import theLastJedi from '../../public/films/star-wars-the-last-jedi.webp';
 import riseOfSkywalker from '../../public/films/star-wars-the-rise-of-skywalker.webp';
 
+import thePhantomMenaceCover from '../../public/films/star-wars-the-phantom-menace-cover.webp';
+import attackOfTheClonesCover from '../../public/films/star-wars-attack-of-the-clones-cover.webp';
+import revengeOfTheSithCover from '../../public/films/star-wars-revenge-of-the-sith-cover.webp';
+import aNewHopeCover from '../../public/films/star-wars-a-new-hope-cover.webp';
+import theEmpireStrikesBackCover from '../../public/films/star-wars-the-empire-strikes-back-cover.webp';
+import returnOfTheJediCover from '../../public/films/star-wars-the-return-of-the-jedi-cover.webp';
+import theForceAwakensCover from '../../public/films/star-wars-the-force-awakens-cover.webp';
+import theLastJediCover from '../../public/films/star-wars-the-last-jedi-cover.webp';
+import riseOfSkywalkerCover from '../../public/films/star-wars-the-rise-of-skywalker-cover.webp';
+
 
 const characterExtras: CharacterExtras[] = [
   {
@@ -144,93 +154,111 @@ const swTextContent: GenericObject = {
 
 const films: Film[] = [
   {
-    title: "Star Wars: The Phantom Menace (Episode I)",
+    title: "Star Wars: The Phantom Menace",
     episode: 1,
+    episodeRoman: 'I',
     tagline: "The Phantom Menace introduces young Anakin Skywalker. He is discovered by Jedi Master Qui-Gon Jinn and his apprentice Obi-Wan Kenobi as the Sith return.",
     releaseYear: 1999,
     director: "George Lucas",
     boxOffice: 1027,
     image: thePhantomMenace,
+    coverImage: thePhantomMenaceCover,
     url: 'films/star-wars-episode-i-the-phantom-menace'
   },
   {
-    title: "Star Wars: Attack of the Clones (Episode II)",
+    title: "Star Wars: Attack of the Clones",
     episode: 2,
+    episodeRoman: 'II',
     tagline: "Attack of the Clones follows Anakin Skywalker as he falls in love with Padmé Amidala and begins his path to the dark side, while the galaxy edges closer to war.",
     releaseYear: 2002,
     director: "George Lucas",
     boxOffice: 653,
     image: attackOfTheClones,
+    coverImage: attackOfTheClonesCover,
     url: 'films/star-wars-episode-ii-attack-of-the-clones'
   },
   {
-    title: "Star Wars: Revenge of the Sith (Episode III)",
+    title: "Star Wars: Revenge of the Sith",
     episode: 3,
+    episodeRoman: 'III',
     tagline: "Revenge of the Sith showcases Anakin Skywalker's transformation into Darth Vader. The Jedi are destroyed and the Galactic Empire rises.",
     releaseYear: 2005,
     director: "George Lucas",
     boxOffice: 868,
     image: revengeOfTheSith,
+    coverImage: revengeOfTheSithCover,
     url: 'films/star-wars-episode-iii-revenge-of-the-sith'
   },
   {
-    title: "Star Wars: A New Hope (Episode IV)",
+    title: "Star Wars: A New Hope",
     episode: 4,
+    episodeRoman: 'IV',
     tagline: "A New Hope centers around a young hero named Luke Skywalker. He teams up with the quick-witted smuggler Han Solo and the wise Jedi Master Obi-Wan Kenobi to rescue Princess Leia and defeat the evil Empire.",
     releaseYear: 1977,
     director: "George Lucas",
     boxOffice: 775,
     image: aNewHope,
+    coverImage: aNewHopeCover,
     url: 'films/star-wars-episode-iv-a-new-hope'
   },
   {
-    title: "Star Wars: The Empire Strikes Back (Episode V)",
+    title: "Star Wars: The Empire Strikes Back",
     episode: 5,
+    episodeRoman: 'V',
     tagline: "The Empire Strikes Back follows Luke Skywalker as he trains to become a Jedi Knight with Master Yoda while his friends are pursued by Darth Vader.",
     releaseYear: 1980,
     director: "Irvin Kershner",
     boxOffice: 538,
     image: theEmpireStrikesBack,
+    coverImage: theEmpireStrikesBackCover,
     url: 'films/star-wars-episode-v-the-empire-strikes-back'
   },
   {
-    title: "Star Wars: Return of the Jedi (Episode VI)",
+    title: "Star Wars: Return of the Jedi",
     episode: 6,
+    episodeRoman: 'VI',
     tagline: "Return of the Jedi sees Luke Skywalker confronting Darth Vader and the Emperor. He strives to bring peace to the galaxy and redeem his father.",
     releaseYear: 1983,
     director: "Richard Marquand",
     boxOffice: 475,
     image: returnOfTheJedi,
+    coverImage: returnOfTheJediCover,
     url: 'films/star-wars-episode-vi-return-of-the-jedi'
   },
   {
-    title: "Star Wars: The Force Awakens (Episode VII)",
+    title: "Star Wars: The Force Awakens",
     episode: 7,
+    episodeRoman: 'VII',
     tagline: "The Force Awakens introduces a new generation of heroes led by Rey. They fight against the First Order with help from Han Solo and Leia Organa.",
     releaseYear: 2015,
     director: "J.J. Abrams",
     boxOffice: 2068,
     image: theForceAwakens,
+    coverImage: theForceAwakensCover,
     url: 'films/star-wars-episode-vii-the-force-awakens'
   },
   {
-    title: "Star Wars: The Last Jedi (Episode VIII)",
+    title: "Star Wars: The Last Jedi",
     episode: 8,
+    episodeRoman: 'VIII',
     tagline: "The Last Jedi follows Rey as she seeks training from Luke Skywalker, while the Resistance battles the First Order in a struggle for survival.",
     releaseYear: 2017,
     director: "Rian Johnson",
     boxOffice: 1332,
     image: theLastJedi,
+    coverImage: theLastJediCover,
     url: 'films/star-wars-episode-viii-the-last-jedi'
   },
   {
-    title: "Star Wars: The Rise of Skywalker (Episode IX)",
+    title: "Star Wars: The Rise of Skywalker",
     episode: 9,
+    episodeRoman: 'IX',
     tagline: "The Rise of Skywalker concludes the saga as Rey and the Resistance face the First Order in a final battle, and Rey discovers her true heritage.",
     releaseYear: 2019,
     director: "J.J. Abrams",
     boxOffice: 1074,
     image: riseOfSkywalker,
+    coverImage: riseOfSkywalkerCover,
     url: 'films/star-wars-episode-ix-the-rise-of-skywalker'
   }
 ];

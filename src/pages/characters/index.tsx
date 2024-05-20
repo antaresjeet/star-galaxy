@@ -61,7 +61,6 @@ export default function Characters(): JSX.Element {
   }, []);
 
   const filteredCharacters = characters.filter((character) => character.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  console.log('filteredCharacters: ', filteredCharacters)
 
   const onModalClose = () => {
     setModalAnimation(ModalAnimation.CLOSE)

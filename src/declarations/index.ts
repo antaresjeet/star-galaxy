@@ -71,11 +71,13 @@ export interface ModalProps {
 export interface Film {
   title: string,
   episode: number,
+  episodeRoman: string;
   tagline: string,
   releaseYear: number,
   director: string,
   boxOffice: number,
   image: StaticImageData;
+  coverImage: StaticImageData;
   url: string;
 }
 
@@ -87,4 +89,8 @@ export enum SortByFilm {
 export interface FilmSorting {
   name: string,
   value: SortByFilm
+}
+
+export interface CarouselProps {
+  carouselItems: Film[] | any[]
 }
