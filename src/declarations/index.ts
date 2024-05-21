@@ -112,3 +112,18 @@ export enum ShopItemCategory {
   Toys = "Toys",
   Puzzles = "Puzzles"
 }
+
+export interface Cart {
+  shopItem: ShopItem,
+  quantity: number
+}
+
+export type Sign = '+' | '-'
+export interface QuantityUpdateButtonProps {
+  sign: Sign,
+  isDisabled: boolean
+}
+export interface ShopCardProps {
+  shopItem: ShopItem,
+  clickHandler: () => void;
+}
