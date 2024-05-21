@@ -1,4 +1,4 @@
-import { CharacterExtras, Film, FilmSorting, GenericObject, SortByFilm } from '@/declarations';
+import { CharacterExtras, Film, FilmSorting, GenericObject, ShopItem, ShopItemCategory, SortByFilm } from '@/declarations';
 import { StaticImageData } from 'next/image';
 
 // * characters
@@ -45,6 +45,44 @@ import theForceAwakensCover from '../../public/films/star-wars-the-force-awakens
 import theLastJediCover from '../../public/films/star-wars-the-last-jedi-cover.webp';
 import riseOfSkywalkerCover from '../../public/films/star-wars-the-rise-of-skywalker-cover.webp';
 
+
+//* shop
+
+import darthVaderActionFigure from '../../public/shop/darth-vader-action-figure.webp';
+import millenniumFalconLegoSet from '../../public/shop/millennium-falcon-lego-set.webp';
+import yodaPlushToy from '../../public/shop/yoda-plush-toy.webp';
+import lightsaberKeychain from '../../public/shop/lightsaber-keychain.webp';
+import starWarsTShirt from '../../public/shop/star-wars-t-shirt.webp';
+import r2d2ModelKit from '../../public/shop/r2-d2-model-kit.webp';
+import chewbaccaMug from '../../public/shop/chewbacca-mug.webp';
+import kyloRenHelmet from '../../public/shop/kylo-ren-helmet.webp';
+import stormtrooperBackpack from '../../public/shop/stormtrooper-backpackwebp.webp';
+import theChildBabyYodaFunkoPop from '../../public/shop/the-child-(baby-yoda)-funko-pop.webp';
+import xWingFighterModel from '../../public/shop/x-wing-fighter-model.webp';
+import starWarsPosterSet from '../../public/shop/star-wars-poster-set.webp';
+import hanSoloBlaster from '../../public/shop/han-solo-blaster.webp';
+import princessLeiaCostume from '../../public/shop/princess-leia-costume.webp';
+import bb8AlarmClock from '../../public/shop/bb-8-alarm-clock.webp';
+import jediRobe from '../../public/shop/jedi-robe.webp';
+import starWarsMonopoly from '../../public/shop/star-wars-monopoly.webp';
+import c3poSocks from '../../public/shop/c-3po-Socks.webp';
+import starWarsiPhoneCase from '../../public/shop/star-wars-iPhone-case.webp';
+import jabbaTheHuttFigurine from '../../public/shop/jabba-the-hutt-figurine.webp';
+import atatWalkerLEGOSet from '../../public/shop/at-at-walker-lego-set.webp';
+import starWarsBedSheets from '../../public/shop/star-wars-bed-sheets.webp';
+import theMandalorianHelmet from '../../public/shop/the-mandalorian-helmet.webp';
+import reyActionFigure from '../../public/shop/rey-action-figure.webp';
+import bobaFettKeychain from '../../public/shop/boba-fett-keychain.webp';
+import darthMaulLightsaber from '../../public/shop/darth-maul-lightsaber.webp';
+import starWarsPuzzle from '../../public/shop/star-wars-puzzle.webp';
+import cloneTrooperBlaster from '../../public/shop/clone-trooper-blaster.webp';
+import starWarsBaseballCap from '../../public/shop/star-wars-baseball-cap.webp';
+import ewokPlushToy from '../../public/shop/ewok-plush-toy.webp';
+import obiWanKenobiLightsaber from '../../public/shop/obi-wan-kenobi-lightsaber.webp';
+import yodaActionFigure from '../../public/shop/yoda-action-figure.webp';
+import starWarsCoffeeMug from '../../public/shop/star-wars-coffee-mug.webp';
+import lukeSkywalkerCostume from '../../public/shop/luke-skywalker-costume.webp';
+import darthVaderHelmet from '../../public/shop/darth-vader-helmet.webp';
 
 const characterExtras: CharacterExtras[] = [
   {
@@ -274,10 +312,329 @@ const filmsSorting: FilmSorting[] = [
   },
 ]
 
+const shopItems: ShopItem[] = [
+  {
+    id: 1,
+    name: "Darth Vader Action Figure",
+    availableQuantity: 50,
+    category: ShopItemCategory.ActionFigures,
+    price: 29.99,
+    description: "12-inch Darth Vader action figure with lightsaber.",
+    image: darthVaderActionFigure
+  },
+  {
+    id: 2,
+    name: "Millennium Falcon LEGO Set",
+    availableQuantity: 20,
+    category: ShopItemCategory.LEGO,
+    price: 159.99,
+    description: "Detailed LEGO set of the Millennium Falcon.",
+    image: millenniumFalconLegoSet
+  },
+  {
+    id: 3,
+    name: "Yoda Plush Toy",
+    availableQuantity: 35,
+    category: ShopItemCategory.PlushToys,
+    price: 19.99,
+    description: "Soft and cuddly Yoda plush toy.",
+    image: yodaPlushToy
+  },
+  {
+    id: 4,
+    name: "Lightsaber Keychain",
+    availableQuantity: 100,
+    category: ShopItemCategory.Accessories,
+    price: 9.99,
+    description: "Miniature lightsaber keychain with LED light.",
+    image: lightsaberKeychain
+  },
+  {
+    id: 5,
+    name: "Star Wars T-Shirt",
+    availableQuantity: 75,
+    category: ShopItemCategory.Apparel,
+    price: 24.99,
+    description: "100% cotton Star Wars themed t-shirt.",
+    image: starWarsTShirt
+  },
+  {
+    id: 6,
+    name: "R2-D2 Model Kit",
+    availableQuantity: 30,
+    category: ShopItemCategory.ModelKits,
+    price: 39.99,
+    description: "Build your own R2-D2 model with this kit.",
+    image: r2d2ModelKit
+  },
+  {
+    id: 7,
+    name: "Chewbacca Mug",
+    availableQuantity: 40,
+    category: ShopItemCategory.HomeAndKitchen,
+    price: 14.99,
+    description: "Ceramic mug shaped like Chewbacca.",
+    image: chewbaccaMug
+  },
+  {
+    id: 8,
+    name: "Kylo Ren Helmet",
+    availableQuantity: 15,
+    category: ShopItemCategory.Costumes,
+    price: 89.99,
+    description: "Detailed replica of Kylo Ren's helmet.",
+    image: kyloRenHelmet
+  },
+  {
+    id: 9,
+    name: "Stormtrooper Backpack",
+    availableQuantity: 25,
+    category: ShopItemCategory.Accessories,
+    price: 49.99,
+    description: "Durable backpack designed like a Stormtrooper.",
+    image: stormtrooperBackpack
+  },
+  {
+    id: 10,
+    name: "The Child (Baby Yoda) Funko Pop",
+    availableQuantity: 60,
+    category: ShopItemCategory.Collectibles,
+    price: 12.99,
+    description: "The Child Funko Pop vinyl figure.",
+    image: theChildBabyYodaFunkoPop
+  },
+  {
+    id: 11,
+    name: "X-Wing Fighter Model",
+    availableQuantity: 20,
+    category: ShopItemCategory.ModelKits,
+    price: 49.99,
+    description: "Highly detailed X-Wing Fighter model kit.",
+    image: xWingFighterModel
+  },
+  {
+    id: 12,
+    name: "Star Wars Poster Set",
+    availableQuantity: 30,
+    category: ShopItemCategory.HomeAndKitchen,
+    price: 19.99,
+    description: "Set of 4 Star Wars movie posters.",
+    image: starWarsPosterSet
+  },
+  {
+    id: 13,
+    name: "Han Solo Blaster",
+    availableQuantity: 10,
+    category: ShopItemCategory.Toys,
+    price: 39.99,
+    description: "Replica of Han Solo's iconic blaster.",
+    image: hanSoloBlaster
+  },
+  {
+    id: 14,
+    name: "Princess Leia Costume",
+    availableQuantity: 25,
+    category: ShopItemCategory.Costumes,
+    price: 69.99,
+    description: "Authentic Princess Leia costume for adults.",
+    image: princessLeiaCostume
+  },
+  {
+    id: 15,
+    name: "BB-8 Alarm Clock",
+    availableQuantity: 30,
+    category: ShopItemCategory.HomeAndKitchen,
+    price: 29.99,
+    description: "BB-8 shaped digital alarm clock.",
+    image: bb8AlarmClock
+  },
+  {
+    id: 16,
+    name: "Jedi Robe",
+    availableQuantity: 15,
+    category: ShopItemCategory.Costumes,
+    price: 59.99,
+    description: "High-quality Jedi robe for cosplay.",
+    image: jediRobe
+  },
+  {
+    id: 17,
+    name: "Star Wars Monopoly",
+    availableQuantity: 40,
+    category: ShopItemCategory.BoardGames,
+    price: 34.99,
+    description: "Monopoly game set in the Star Wars universe.",
+    image: starWarsMonopoly
+  },
+  {
+    id: 18,
+    name: "C-3PO Socks",
+    availableQuantity: 80,
+    category: ShopItemCategory.Apparel,
+    price: 9.99,
+    description: "Pair of socks featuring C-3PO.",
+    image: c3poSocks
+  },
+  {
+    id: 19,
+    name: "Star Wars iPhone Case",
+    availableQuantity: 50,
+    category: ShopItemCategory.Accessories,
+    price: 14.99,
+    description: "Protective iPhone case with Star Wars design.",
+    image: starWarsiPhoneCase
+  },
+  {
+    id: 20,
+    name: "Jabba the Hutt Figurine",
+    availableQuantity: 30,
+    category: ShopItemCategory.Collectibles,
+    price: 29.99,
+    description: "Detailed figurine of Jabba the Hutt.",
+    image: jabbaTheHuttFigurine
+  },
+  {
+    id: 21,
+    name: "AT-AT Walker LEGO Set",
+    availableQuantity: 15,
+    category: ShopItemCategory.LEGO,
+    price: 99.99,
+    description: "LEGO set of the AT-AT Walker.",
+    image: atatWalkerLEGOSet
+  },
+  {
+    id: 22,
+    name: "Star Wars Bed Sheets",
+    availableQuantity: 20,
+    category: ShopItemCategory.HomeAndKitchen,
+    price: 49.99,
+    description: "Star Wars themed bed sheets set.",
+    image: starWarsBedSheets
+  },
+  {
+    id: 23,
+    name: "The Mandalorian Helmet",
+    availableQuantity: 12,
+    category: ShopItemCategory.Costumes,
+    price: 119.99,
+    description: "Authentic replica of The Mandalorian's helmet.",
+    image: theMandalorianHelmet
+  },
+  {
+    id: 24,
+    name: "Rey Action Figure",
+    availableQuantity: 40,
+    category: ShopItemCategory.ActionFigures,
+    price: 24.99,
+    description: "6-inch action figure of Rey.",
+    image: reyActionFigure
+  },
+  {
+    id: 25,
+    name: "Boba Fett Keychain",
+    availableQuantity: 100,
+    category: ShopItemCategory.Accessories,
+    price: 7.99,
+    description: "Boba Fett helmet keychain.",
+    image: bobaFettKeychain
+  },
+  {
+    id: 26,
+    name: "Darth Maul Lightsaber",
+    availableQuantity: 10,
+    category: ShopItemCategory.Toys,
+    price: 79.99,
+    description: "Double-bladed lightsaber of Darth Maul.",
+    image: darthMaulLightsaber
+  },
+  {
+    id: 27,
+    name: "Star Wars Puzzle",
+    availableQuantity: 30,
+    category: ShopItemCategory.Puzzles,
+    price: 19.99,
+    description: "1000-piece Star Wars jigsaw puzzle.",
+    image: starWarsPuzzle
+  },
+  {
+    id: 28,
+    name: "Clone Trooper Blaster",
+    availableQuantity: 20,
+    category: ShopItemCategory.Toys,
+    price: 29.99,
+    description: "Clone Trooper blaster toy.",
+    image: cloneTrooperBlaster
+  },
+  {
+    id: 29,
+    name: "Star Wars Baseball Cap",
+    availableQuantity: 50,
+    category: ShopItemCategory.Apparel,
+    price: 19.99,
+    description: "Adjustable baseball cap with Star Wars logo.",
+    image: starWarsBaseballCap
+  },
+  {
+    id: 30,
+    name: "Ewok Plush Toy",
+    availableQuantity: 35,
+    category: ShopItemCategory.PlushToys,
+    price: 16.99,
+    description: "Cute and cuddly Ewok plush toy.",
+    image: ewokPlushToy
+  },
+  {
+    id: 31,
+    name: "Obi-Wan Kenobi Lightsaber",
+    availableQuantity: 15,
+    category: ShopItemCategory.Toys,
+    price: 89.99,
+    description: "High-quality replica of Obi-Wan Kenobi's lightsaber.",
+    image: obiWanKenobiLightsaber
+  },
+  {
+    id: 32,
+    name: "Yoda Action Figure",
+    availableQuantity: 45,
+    category: ShopItemCategory.ActionFigures,
+    price: 21.99,
+    description: "4-inch Yoda action figure with accessories.",
+    image: yodaActionFigure
+  },
+  {
+    id: 33,
+    name: "Star Wars Coffee Mug",
+    availableQuantity: 60,
+    category: ShopItemCategory.HomeAndKitchen,
+    price: 12.99,
+    description: "Ceramic coffee mug with Star Wars graphics.",
+    image: starWarsCoffeeMug
+  },
+  {
+    id: 34,
+    name: "Luke Skywalker Costume",
+    availableQuantity: 20,
+    category: ShopItemCategory.Costumes,
+    price: 79.99,
+    description: "Authentic Luke Skywalker costume.",
+    image: lukeSkywalkerCostume
+  },
+  {
+    id: 35,
+    name: "Darth Vader Helmet",
+    availableQuantity: 10,
+    category: ShopItemCategory.Costumes,
+    price: 129.99,
+    description: "Detailed Darth Vader helmet replica.",
+    image: darthVaderHelmet
+  },
+];
+
 export {
   characterExtras,
   aboutImages,
   swTextContent,
   films,
-  filmsSorting
+  filmsSorting,
+  shopItems
 }

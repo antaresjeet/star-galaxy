@@ -1,4 +1,5 @@
 import ShopCard from "@/components/shop-card";
+import { shopItems } from "@/constants";
 
 export default function Shop(): JSX.Element {
   return (
@@ -8,8 +9,9 @@ export default function Shop(): JSX.Element {
         <p className="text-base">Unearth Rare Finds and Galactic Wonders Alike</p>
       </div>
       <div className="shop-star-war mt-12 grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-        <ShopCard title="Star Wars Art" price={45} in_cart={false}></ShopCard>
-        <ShopCard title="Star Wars Art" price={45} in_cart={true}></ShopCard>
+        {shopItems.map((shopItem => (
+          <ShopCard {...shopItem} key={shopItem.id}></ShopCard>
+        )))}
       </div>
     </section>
   );

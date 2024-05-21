@@ -54,12 +54,6 @@ export interface Movie {
   release_year: string
 }
 
-export interface ShopItem {
-  title: string,
-  price: number,
-  in_cart: boolean
-}
-
 export enum ModalAnimation {
   OPEN = 'open',
   CLOSE = 'close'
@@ -93,4 +87,28 @@ export interface FilmSorting {
 
 export interface CarouselProps {
   carouselItems: Film[] | any[]
+}
+export interface ShopItem {
+  id: number;
+  name: string;
+  availableQuantity: number;
+  category: ShopItemCategory;
+  price: number;
+  description: string;
+  image: StaticImageData;
+}
+
+export enum ShopItemCategory {
+  ActionFigures = "Action Figures",
+  LEGO = "LEGO Sets",
+  PlushToys = "Plush Toys",
+  Accessories = "Accessories",
+  Apparel = "Apparel",
+  ModelKits = "Model Kits",
+  HomeAndKitchen = "Home & Kitchen",
+  Costumes = "Costumes",
+  Collectibles = "Collectibles",
+  BoardGames = "Board Games",
+  Toys = "Toys",
+  Puzzles = "Puzzles"
 }
