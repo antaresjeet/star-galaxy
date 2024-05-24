@@ -194,6 +194,42 @@ input:focus {
   }
 }
 
+@media all and (max-width: 990px) {
+  .gallery {
+    width: 190px;
+    height: 160px;
+  }
+  @for $i from 1 through 8 {
+    .gallery span:nth-child(#{$i}) {
+      transform: rotateY(calc(#{$i} * 45deg)) translateZ(320px)
+    }
+  }
+}
+
+@media all and (max-width: 814px) {
+  .gallery {
+    width: 150px;
+    height: 120px;
+  }
+  @for $i from 1 through 8 {
+    .gallery span:nth-child(#{$i}) {
+      transform: rotateY(calc(#{$i} * 45deg)) translateZ(280px)
+    }
+  }
+}
+
+@media all and (max-width: 814px) {
+  .gallery {
+    width: 120px;
+    height: 100px;
+  }
+  @for $i from 1 through 8 {
+    .gallery span:nth-child(#{$i}) {
+      transform: rotateY(calc(#{$i} * 45deg)) translateZ(200px)
+    }
+  }
+}
+
 @media all and (max-width: 575.98px) {
   body {
     line-height: 2;
@@ -202,6 +238,29 @@ input:focus {
   .star-intro {
     h1 {
       text-shadow: 7px 7px 0 #000, 9px 9px 0 #ffe81f;
+    }
+  }
+  .star-header-wrap {
+    a {
+      margin: 0 18px;
+    }
+  }
+  .gallery {
+    width: 80px;
+    height: 60px;
+  }
+  @for $i from 1 through 8 {
+    .gallery span:nth-child(#{$i}) {
+      transform: rotateY(calc(#{$i} * 45deg)) translateZ(150px)
+    }
+  }
+}
+
+@media all and (max-width: 425px) {
+  .star-header-wrap {
+    a {
+      margin: 0 12px;
+      font-size: 10px;
     }
   }
 }

@@ -6,8 +6,8 @@ import { openNewWindow } from "@/helpers";
 export default function About(): JSX.Element {
   return (
     <section className="container mx-auto pt-8 px-12">
-      <h1 className="text-4xl font-bold text-center">A Long Time Ago in a Galaxy Far, Far Away...</h1>
-      <div className="about-gally-wrap flex justify-center items-center p-8 min-h-[68vh]">
+      <h1 className="sm:text-4xl text-2xl font-bold text-center">A Long Time Ago in a Galaxy Far, Far Away...</h1>
+      <div className="about-gally-wrap flex justify-center items-center p-8 lg:my-[130px] sm:my-[60px] my-[40px]">
         <div className="gallery mt-4">
           {aboutImages.map((aboutImage, index) => (
             <span key={index}>
