@@ -194,6 +194,18 @@ input:focus {
   }
 }
 
+.cart-head-row{
+  td{
+    padding: 20px 0;
+  }
+}
+
+.cart-list-body{
+  td{
+    padding: 12px 18px 12px 0;
+  }
+}
+
 @media all and (max-width: 990px) {
   .gallery {
     width: 190px;
