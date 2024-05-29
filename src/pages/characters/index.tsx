@@ -35,8 +35,7 @@ export default function Characters(): JSX.Element {
         const data = await response.json();
         setHomeWorlds(data.results);
       };
-      !homeWorlds.length && getHomeWorlds();
-
+      !homeWorlds.length && await getHomeWorlds();
 
       // * set home world and image in character 
 
