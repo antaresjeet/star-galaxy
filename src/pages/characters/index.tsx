@@ -2,7 +2,7 @@ import CharacterCard from "@/components/character-card";
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { charactersAtom, homeWorldsAtom, loadingAtom } from "@/jotai";
-import { Character, ModalAnimation } from "@/declarations";
+import { Character, HomeWorld, ModalAnimation } from "@/declarations";
 import { characterExtras, swTextContent } from "@/constants";
 import DarthVaderLoader from "@/components/darth-vader-loader";
 import CharacterDetail from "@/components/character-detail";
@@ -19,6 +19,7 @@ export default function Characters(): JSX.Element {
   useEffect(() => {
     const getData = async () => {
       let charactersData: Character[] = []
+      let homeWorldsData: HomeWorld[] = []
 
       // * fetch characters
       const getCharacters = async () => {
@@ -33,7 +34,7 @@ export default function Characters(): JSX.Element {
       const getHomeWorlds = async () => {
         const response = await fetch(`${process.env.swapiEndPoint}planets/`);
         const data = await response.json();
-        setHomeWorlds(data.results);
+        homeWorldsData = data.results;
       };
       !homeWorlds.length && await getHomeWorlds();
 
@@ -46,7 +47,7 @@ export default function Characters(): JSX.Element {
           return data.name ?? 'unknown'
         }
         for (let i = 0; i < charactersData.length; i++) {
-          charactersData[i].homeworld_name = homeWorlds.find((planet) => planet.url === charactersData[i].homeworld)?.name ?? await getHomeWorld(charactersData[i].homeworld)
+          charactersData[i].homeworld_name = homeWorldsData.find((planet) => planet.url === charactersData[i].homeworld)?.name ?? await getHomeWorld(charactersData[i].homeworld)
           const extras = characterExtras.find((characterExtra) => characterExtra.url === charactersData[i].url)
           Object.assign(charactersData[i], extras)
         }
@@ -54,6 +55,7 @@ export default function Characters(): JSX.Element {
 
       await addKeys();
       setCharacters(charactersData);
+      setHomeWorlds(homeWorldsData);
       setLoading(false);
     }
     !characters.length && getData();
