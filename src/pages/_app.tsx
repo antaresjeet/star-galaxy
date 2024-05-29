@@ -5,6 +5,7 @@ import '../styles.scss'
 import ObiWan from '@/components/obi-wan'
 import Head from 'next/head'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function MyStarWarsApp({
   Component,
@@ -48,6 +49,7 @@ export default function MyStarWarsApp({
         <div className='flex-1'>
           <Component {...pageProps} />
           <Analytics />
+          <SpeedInsights />
         </div>
         <ObiWan />
         <Footer />
