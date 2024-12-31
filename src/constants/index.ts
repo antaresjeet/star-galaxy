@@ -86,61 +86,61 @@ import darthVaderHelmet from '../../public/shop/darth-vader-helmet.webp';
 
 const characterExtras: CharacterExtras[] = [
   {
-    url: 'https://swapi.dev/api/people/1/',
+    url: `${process.env.swapiEndPoint}people/1/`,
     image: lukeSkyWalker,
     tagline: "A farm boy from Tatooine, Luke Skywalker becomes a hero when he trains as a Jedi and uses the Force to help save the galaxy.",
     title: "The Jedi"
   },
   {
-    url: 'https://swapi.dev/api/people/2/',
+    url: `${process.env.swapiEndPoint}people/2/`,
     image: c3po,
     tagline: "A protocol droid fluent in over six million forms of communication, C-3PO often finds himself in the midst of the galaxy's most crucial events.",
     title: "The Diplomat"
   },
   {
-    url: 'https://swapi.dev/api/people/3/',
+    url: `${process.env.swapiEndPoint}people/3/`,
     image: r2d2,
     tagline: "A resourceful astromech droid, R2-D2 is always ready to save the day with his clever gadgets and unwavering loyalty.",
     title: "The Heroic Droid"
   },
   {
-    url: 'https://swapi.dev/api/people/4/',
+    url: `${process.env.swapiEndPoint}people/4/`,
     image: darthVader,
     tagline: "Once a Jedi Knight, Anakin Skywalker fell to the dark side and became one of the most feared figures in the galaxy.",
     title: "The Sith Lord"
   },
   {
-    url: 'https://swapi.dev/api/people/5/',
+    url: `${process.env.swapiEndPoint}people/5/`,
     image: leiaOrgana,
     tagline: "A princess and a leader, Leia Organa's bravery and wisdom inspire the Rebel Alliance in their fight against the Empire.",
     title: "The Rebel Leader"
   },
   {
-    url: 'https://swapi.dev/api/people/6/',
+    url: `${process.env.swapiEndPoint}people/6/`,
     image: owenLars,
     tagline: "A humble moisture farmer on Tatooine, Owen Lars tries to protect his family from the perils of the galaxy.",
     title: "The Protector"
   },
   {
-    url: 'https://swapi.dev/api/people/7/',
+    url: `${process.env.swapiEndPoint}people/7/`,
     image: beruWhitesunLars,
     tagline: "A nurturing and kind-hearted woman, Beru Whitesun Lars provides a safe home for young Luke Skywalker on Tatooine.",
     title: "The Caregiver"
   },
   {
-    url: 'https://swapi.dev/api/people/8/',
+    url: `${process.env.swapiEndPoint}people/8/`,
     image: r5d4,
     tagline: "An astromech droid with a bit of bad luck, R5-D4's malfunction leads to a fateful turn of events for the Rebel Alliance.",
     title: "The Unlucky Droid"
   },
   {
-    url: 'https://swapi.dev/api/people/9/',
+    url: `${process.env.swapiEndPoint}people/9/`,
     image: biggs,
     tagline: "A skilled pilot and loyal friend to Luke Skywalker, Biggs Darklighter fights valiantly for the Rebel Alliance.",
     title: "The Brave Pilot"
   },
   {
-    url: 'https://swapi.dev/api/people/10/',
+    url: `${process.env.swapiEndPoint}people/10/`,
     image: obiWanKenobi,
     tagline: "A wise and powerful Jedi Master, Obi-Wan Kenobi guides young heroes and stands as a beacon of hope against the darkness.",
     title: "The Mentor"

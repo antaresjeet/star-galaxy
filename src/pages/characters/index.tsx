@@ -49,6 +49,7 @@ export default function Characters(): JSX.Element {
         for (let i = 0; i < charactersData.length; i++) {
           charactersData[i].homeworld_name = homeWorldsData.find((planet) => planet.url === charactersData[i].homeworld)?.name ?? await getHomeWorld(charactersData[i].homeworld)
           const extras = characterExtras.find((characterExtra) => characterExtra.url === charactersData[i].url)
+          console.log('extras: ', extras)
           Object.assign(charactersData[i], extras)
         }
       }
@@ -62,6 +63,7 @@ export default function Characters(): JSX.Element {
   }, []);
 
   const filteredCharacters = characters.filter((character) => character.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  console.log('filteredCharacters: ', filteredCharacters)
 
   const onModalClose = () => {
     setModalAnimation(ModalAnimation.CLOSE)
