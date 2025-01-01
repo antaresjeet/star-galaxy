@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    swapiEndPoint: 'https://swapi.dev/api/',
+    swapiEndPoint: 'https://swapi.py4e.com/api/',
     starWarsOfficialWebsite: 'https://www.starwars.com/'
   },
   i18n: {
